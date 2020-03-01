@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages:["orgchart"]});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+        data.addColumn('string', 'ToolTip');
+
+        // For each orgchart box, provide the name, manager, and tooltip to show.
+        data.addRows([
+          ['CEO', '', 'Business'],
+['COO', 'CEO', 'Operations'],
+['CTO', 'CEO', 'Engineering'],
+['CMO', 'CEO', 'Marketing'],
+['Chief Product Offier', 'CEO', 'Product'],
+['CFO', 'CEO', 'Finance'],
+['Chief People Officer', 'CEO', 'Human Resource'],
+['General Counsel', 'CEO', 'Legal'],
+['Chief Of Staff', 'CEO', 'CEO Office'],
+['Public Relations', 'CEO', 'Marketing'],
+['Business Analyst', 'Chief Of Staff', 'CEO Office'],
+['Executive Assistant', 'Chief Of Staff', 'CEO Office'],
+['GM, North', 'COO', 'Operations'],
+['GM, South', 'COO', 'Operations'],
+['GM, West', 'COO', 'Operations'],
+['GM, East', 'COO', 'Operations'],
+['GM, Central', 'COO', 'Operations'],
+['VP, Supply', 'COO', 'Operations'],
+['VP, Operations', 'COO', 'Operations'],
+['VP, Sales', 'COO', 'Operations'],
+['Supply Head, North', 'GM, North', 'Operations'],
+['Relationship Manager', 'Supply Head, North', 'Operations'],
+['Operations Head, North', 'GM, North', 'Operations'],
+['Daily Ops', 'Operations Head, North', 'Operations'],
+['Bus Captains', 'Daily Ops', 'Operations'],
+['Supply Transformation', 'Operations Head, North', 'Operations'],
+['Procurement', 'Supply Transformation', 'Operations'],
+['Audit', 'Operations Head, North', 'Operations'],
+['Sales Head, North', 'GM, North', 'Sales'],
+['Agent Sales', 'Sales Head, North', 'Sales'],
+['Corporate Sales', 'Sales Head, North', 'Sales'],
+['Pilgrim Sales', 'Sales Head, North', 'Sales'],
+['BTL, North', 'GM, North', 'Marketing'],
+['Customer Head', 'COO', 'Operations'],
+['Team Lead', 'Customer Head', 'Operations'],
+['Customer Support', 'Team Lead', 'Operations'],
+['Quality Control', 'Customer Head', 'Operations'],
+['Training', 'Customer Head', 'Operations'],
+['Special Response Team', 'Customer Head', 'Operations'],
+['Head, Analyst', 'COO', 'Operations'],
+['Analyst', 'Head, Analyst', 'Operations'],
+['Legal, North', 'GM, North', 'Legal'],
+['Digital Marketing Manager', 'CMO', 'Marketing'],
+['Organic', 'Digital Marketing Manager', 'Marketing'],
+['Direct', 'Organic', 'Marketing'],
+['SEO', 'Organic', 'Marketing'],
+['Loyalty', 'Organic', 'Marketing'],
+['CRM', 'Organic', 'Marketing'],
+['Inorganic', 'Digital Marketing Manager', 'Marketing'],
+['Performance', 'Inorganic', 'Marketing'],
+['Graphics', 'Digital Marketing Manager', 'Marketing'],
+['Content Writer', 'Digital Marketing Manager', 'Marketing'],
+['HR', 'Chief People Officer', 'Human Resource'],
+['Recruiter', 'Chief People Officer', 'Human Resource'],
+['VP, Finance', 'CFO', 'Finance'],
+['Accounts Head', 'VP, Finance', 'Finance'],
+['Accountant', 'Accounts Head', 'Finance'],
+['Corporate Counsel', 'General Counsel', 'Legal'],
+['Compliance Head', 'General Counsel', 'Legal'],
+['Company Secretary', 'Compliance Head', 'Legal'],
+['VP, Engineering', 'CTO', 'Engineering'],
+['Engineering Manager', 'VP, Engineering', 'Engineering'],
+['Tech Lead', 'Engineering Manager', 'Engineering'],
+['Software Engineer', 'Tech Lead', 'Engineering'],
+['Software Developer', 'Tech Lead', 'Engineering'],
+['Interns', 'Tech Lead', 'Engineering'],
+['Chief Data Scientist', 'CTO', 'Data Science'],
+['Data Scientist', 'Chief Data Scientist', 'Data Science'],
+['Data Analyst', 'Data Scientist', 'Data Science'],
+['Mobile Lead', 'Engineering Manager', 'Engineering'],
+['Mobile Developer', 'Mobile Lead', 'Engineering'],
+['Web Lead', 'Engineering Manager', 'Engineering'],
+['Web Developer', 'Web Lead', 'Engineering'],
+['Dev Ops', 'Engineering Manager', 'Engineering'],
+['Product Head', 'Chief Product Offier', 'Product'],
+['Product Manager, User', 'Product Head', 'Product'],
+['Product Manager, Partners', 'Product Head', 'Product'],
+['Product Manager, Sales', 'Product Head', 'Product'],
+['Product Analyst', 'Product Head', 'Product']
+        ]);
+
+        // Create the chart.
+        var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+        // Draw the chart, setting the allowHtml option to true for the tooltips.
+        chart.draw(data, {'allowHtml':true});
+      }
+   </script>
+    </head>
+  <body>
+    <div id="chart_div"></div>
+  </body>
+</html>
